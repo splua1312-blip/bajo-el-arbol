@@ -240,17 +240,17 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .ubica .acciones{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
 .mapa{width:100%;aspect-ratio:4/3;border:0;border-radius:16px;outline:1.5px solid var(--oro);outline-offset:6px;background:#22392a}
 @media(max-width:820px){.ubica .envuelto{grid-template-columns:1fr}}
-.pie{background:var(--bosque);color:#efe4cc;text-align:center;padding:30px 20px 170px}
+.pie{background:var(--bosque);color:#efe4cc;text-align:center;padding:30px 20px 110px}
 .pie img{width:110px;margin:0 auto 12px}
 .pie .guion{display:block;color:var(--oro2);font-size:2.1rem}
 .pie p{font-size:.95rem;margin-top:6px}
 .creador{margin-top:18px!important;padding-top:14px;border-top:1px solid rgba(200,162,94,.35);line-height:1.5}.creador b{font-weight:600;color:var(--oro2)}.creador a{display:inline-block;padding:6px 4px;color:var(--oro2)}
 
 /* WhatsApp flotante y pedido */
-.flotante{position:fixed;right:18px;bottom:78px;z-index:30;width:62px;height:62px;display:grid;place-items:center;border-radius:50%;background:var(--wa);color:#fff;box-shadow:0 8px 22px rgba(0,0,0,.35);transition:transform .15s,bottom .2s}
+.flotante{position:fixed;right:18px;bottom:18px;z-index:30;width:62px;height:62px;display:grid;place-items:center;border-radius:50%;background:var(--wa);color:#fff;box-shadow:0 8px 22px rgba(0,0,0,.35);transition:transform .15s,bottom .2s}
 .flotante:hover{transform:scale(1.07)}.flotante svg{width:36px;height:36px;fill:currentColor}
-.con-pedido .flotante{bottom:148px}
-.barra{position:fixed;left:50%;bottom:74px;z-index:29;transform:translateX(-50%);width:min(560px,calc(100% - 24px));display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px;padding:8px 10px 8px 22px;border-radius:999px;background:var(--bosque);border:1.5px solid var(--oro);color:#fff;font:600 1.2rem var(--cond);letter-spacing:.03em;box-shadow:0 10px 26px rgba(0,0,0,.4)}
+.con-pedido .flotante{bottom:88px}
+.barra{position:fixed;left:50%;bottom:14px;z-index:29;transform:translateX(-50%);width:min(560px,calc(100% - 24px));display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px;padding:8px 10px 8px 22px;border-radius:999px;background:var(--bosque);border:1.5px solid var(--oro);color:#fff;font:600 1.2rem var(--cond);letter-spacing:.03em;box-shadow:0 10px 26px rgba(0,0,0,.4)}
 .barra[hidden]{display:none}
 .barra em{font-style:normal;padding:.55em 1em;border-radius:999px;background:var(--wa2);text-transform:uppercase;font-size:1.05rem}
 .hoja{width:min(520px,100%);max-height:88vh;max-height:88dvh;padding:0;border:0;border-radius:20px;background:var(--crema);color:var(--cafe)}
