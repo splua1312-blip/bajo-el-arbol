@@ -101,16 +101,17 @@ ol.pasos>li::before{content:counter(p);position:absolute;left:0;top:1mm;width:7m
 
 <section>
   <h2>2. Primeros pasos: hoy</h2>
-  <p class="lead">Cinco pasos para dejar todo instalado y retomar el trabajo en Cowork.</p>
+  <p class="lead">Cinco pasos para dejar todo instalado y retomar el trabajo en Claude (Chat con funciones de Cowork).</p>
   <ol class="pasos">
     <li><b>Descargue y descomprima</b> el archivo <i>Bajo_el_Arbol_carpeta_de_trabajo.zip</i> en una ubicación fija, por ejemplo <i>Documentos/Clientes/</i>.</li>
-    <li><b>Abra la app de escritorio de Claude</b> (Mac o Windows) y entre a <b>Cowork</b>. Para que Claude trabaje con archivos de su computadora, la tarea debe iniciarse desde la app de escritorio; una tarea iniciada desde la web o el teléfono puede usar sus conectores, pero no sus carpetas locales (Anthropic, s. f.-b).</li>
-    <li><b>Elija la carpeta <i>Bajo_el_Arbol</i></b> como lugar de trabajo. Cowork solo lee y escribe en las carpetas que usted conecte (Anthropic, s. f.-a, s. f.-c).</li>
+    <li><b>Abra la app de escritorio de Claude</b> (Mac o Windows) y entre a <b>Chat</b>. En la versión nueva de Claude, Cowork ya está integrado en Chat: solo verá las pestañas <b>Chat</b> y <b>Code</b>, y cualquier conversación de Chat puede hacer los trabajos de Cowork (Anthropic, s. f.-d). Si su caja de mensajes muestra las opciones "Chat" y "Cowork", elija <b>Cowork</b>. Para que Claude trabaje con archivos de su computadora, la app de escritorio debe estar abierta (Anthropic, s. f.-b).</li>
+    <li><b>Dé acceso a la carpeta <i>Bajo_el_Arbol</i></b>. Claude solo lee y escribe en las carpetas que usted conecte (Anthropic, s. f.-a, s. f.-c), que después aparecen en <i>Configuración → Carpetas de confianza</i> (Anthropic, s. f.-d). Recomendación: cree un <b>Proyecto</b> llamado <i>Bajo el Árbol</i> y pegue en sus instrucciones el contenido de <i>INSTRUCCIONES_PARA_CLAUDE.md</i>.</li>
     <li><b>Dé la primera instrucción</b> (cópiela tal cual):
       <div class="prompt" style="margin-top:2mm"><div class="c">Lee INSTRUCCIONES_PARA_CLAUDE.md y CONTROL_DE_TAREAS.xlsx. Dime en qué punto va el trabajo, qué toca esta semana y qué datos le faltan al cliente.</div></div></li>
     <li><b>Envíe hoy al cliente</b> el PDF de revisión que está en <i>04_Revision_cliente/Semanas_1-3_por_enviar/</i>, con el texto de <i>mensaje_whatsapp.txt</i>. Después cambie el nombre de la carpeta a <i>Semanas_1-3_enviado_2026-11-10</i> y marque en el Excel la columna <b>Enviado a revisión</b>.</li>
   </ol>
-  <div class="ok"><b>Consejo:</b> empiece siempre cada sesión de Cowork con la instrucción del paso 4. Así Claude retoma el contexto completo y no tiene que explicarle nada de nuevo.</div>
+  <div class="ok"><b>Consejo:</b> empiece siempre cada conversación de trabajo con la instrucción del paso 4. Así Claude retoma el contexto completo y no tiene que explicarle nada de nuevo.</div>
+  <div class="aviso"><b>Permisos:</b> en la caja de mensajes elija <b>Manual</b> mientras se familiariza; así Claude le pregunta antes de cada acción. El modo <b>Auto</b> viene activado por omisión (Anthropic, s. f.-d).</div>
   <div class="aviso"><b>Privacidad:</b> las sesiones de Cowork se procesan en los servidores de Anthropic, incluidos los archivos locales que Claude abra (Anthropic, s. f.-c). Conecte solo la carpeta del cliente, no su carpeta personal completa.</div>
 </section>
 
@@ -242,6 +243,7 @@ ol.pasos>li::before{content:counter(p);position:absolute;left:0;top:1mm;width:7m
     <p>Anthropic. (s. f.-a). <i>Get started with Claude Cowork</i>. Claude Help Center. Recuperado el 10 de noviembre de 2026, de https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork</p>
     <p>Anthropic. (s. f.-b). <i>Setting up Claude Cowork</i>. Claude Academy. Recuperado el 10 de noviembre de 2026, de https://academy.claude.com/courses/introduction-to-claude-cowork/getting-set-up</p>
     <p>Anthropic. (s. f.-c). <i>Use Claude Cowork safely</i>. Claude Help Center. Recuperado el 10 de noviembre de 2026, de https://support.claude.com/en/articles/13364135-use-claude-cowork-safely</p>
+    <p>Anthropic. (s. f.-d). <i>Claude Cowork and chat are one Claude</i>. Claude Help Center. Recuperado el 10 de noviembre de 2026, de https://support.claude.com/en/articles/16761823-claude-cowork-and-chat-are-one-claude</p>
     <p>Meta. (s. f.). <i>CTR (link click-through rate)</i>. Meta Business Help Center. Recuperado el 10 de noviembre de 2026, de https://www.facebook.com/business/help/877711998984611</p>
   </div>
 </section>
