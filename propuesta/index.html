@@ -5,7 +5,7 @@
 <meta name="robots" content="noindex">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Bajo el Árbol | Panadería, café y desayunos en Xilotzingo, Puebla</title>
-<meta name="description" content="Café recién molido, frappés, pan dulce y desayunos desde $39 en INFONAVIT San José Xilotzingo, Puebla. Lunes a sábado de 9:00 a 21:00 y domingo de 9:00 a 15:00. Pide por WhatsApp.">
+<meta name="description" content="Café recién molido, frappés, pan dulce y desayunos desde $49 en INFONAVIT San José Xilotzingo, Puebla. Lunes a sábado de 9:00 a 21:00 y domingo de 9:00 a 15:00. Pide por WhatsApp.">
 <meta name="theme-color" content="#0f1f14">
 <meta property="og:title" content="Bajo el Árbol | Panadería y café">
 <meta property="og:image" content="img/terraza.webp">
@@ -386,7 +386,7 @@ footer a{color:var(--oro2)}
     <div>
       <img class="hero-logo" src="img/logo.webp" alt="Bajo el Árbol, Panadería y Café" width="230" height="230">
       <h1><span class="script">Un lugar para</span><strong class="oro-txt">disfrutar, compartir</strong><span class="script">y crear momentos inolvidables</span></h1>
-      <p class="lead">Café recién molido, pan dulce y desayunos caseros desde $39, bajo la sombra de nuestro árbol en Infonavit San José Xilotzingo.</p>
+      <p class="lead">Café recién molido, pan dulce y desayunos caseros desde $49, bajo la sombra de nuestro árbol en Infonavit San José Xilotzingo.</p>
       <div class="hero-cta"><a class="btn btn-oro" href="#carta">Ver la carta</a><a class="btn btn-linea" href="#" data-wa="Hola, Bajo el Árbol. Quisiera hacer un pedido." target="_blank" rel="noopener"><svg class="ico"><use href="#wa"/></svg>Pedir por WhatsApp</a></div>
       <div class="datos"><span><b>★ 5.0</b> en Google · 11 opiniones</span><span id="estadoHero">Horario</span></div>
     </div>
@@ -571,15 +571,15 @@ const DRINKS=[
  {n:'Té',cat:'Calientes',c:'#2f5a37',art:te,lema:'una pausa tranquila',d:'Infusión caliente para una tarde tranquila bajo el árbol.',ing:['Infusión','Agua caliente'],s:[['Chico',15],['Grande',30]]},
 ];
 const FOODS=[
- {n:'Huevos al gusto',il:'huevos',d:'Revueltos con jamón o salchicha, estrellados u omelette. Acompañados con frijoles y totopos.',s:[['',39]]},
- {n:'Bisteck o pechuga asada',il:'bisteck',d:'Acompañada de frijoles, totopos y ensalada de lechuga con rodajas de jitomate.',s:[['',49]]},
- {n:'Chilaquiles',il:'chilaquiles',d:'Con huevo o pollo deshebrado, o con bisteck o pechuga asada.',s:[['Con huevo o pollo',49],['Con bisteck o pechuga',59]]},
- {n:'Enchiladas (5 pzas)',il:'enchiladas',d:'Orden de cinco enchiladas.',s:[['',49]]},
- {n:'Pechuga empanizada',il:'pechuga',d:'Con frijoles, totopos y ensalada de lechuga y jitomate.',s:[['',49]]},
- {n:'Tacos dorados (5)',il:'tacos',d:'Orden de cinco tacos dorados.',s:[['',49]]},
- {n:'Arrachera',il:'arrachera',d:'Con frijoles, totopos y ensalada de lechuga y jitomate.',s:[['',69]]},
- {n:'Sopes (5)',il:'sopes',d:'Frijoles, crema, queso, lechuga y salsa.',s:[['Sin carne',49],['Con bisteck o pechuga',69]]},
- {n:'Enfrijoladas (5)',il:'enfrijoladas',d:'Con pollo.',s:[['',49]]},
+ {n:'Huevos al gusto',il:'huevos',d:'Revueltos con jamón o salchicha, estrellados u omelette. Acompañados con frijoles y totopos.',s:[['',49]]},
+ {n:'Bisteck o pechuga asada',il:'bisteck',d:'Acompañada de frijoles, totopos y ensalada de lechuga con rodajas de jitomate.',s:[['',59]]},
+ {n:'Chilaquiles',il:'chilaquiles',d:'Con huevo o pollo deshebrado, o con bisteck o pechuga asada.',s:[['Con huevo o pollo',59],['Con bisteck o pechuga',69]]},
+ {n:'Enchiladas (5 pzas)',il:'enchiladas',d:'Orden de cinco enchiladas.',s:[['',59]]},
+ {n:'Pechuga empanizada',il:'pechuga',d:'Con frijoles, totopos y ensalada de lechuga y jitomate.',s:[['',59]]},
+ {n:'Tacos dorados (5)',il:'tacos',d:'Orden de cinco tacos dorados.',s:[['',59]]},
+ {n:'Arrachera',il:'arrachera',d:'Con frijoles, totopos y ensalada de lechuga y jitomate.',s:[['',79]]},
+ {n:'Sopes (5)',il:'sopes',d:'Frijoles, crema, queso, lechuga y salsa.',s:[['Sin carne',59],['Con bisteck o pechuga',69]]},
+ {n:'Enfrijoladas (5)',il:'enfrijoladas',d:'Con pollo.',s:[['',59]]},
 ];
 const EXTRAS=[['Pan dulce (pieza)',7,1],['Sobre extra',5,2],['Jarra de agua (2 lts)',40,3],['Vaso de agua de sabor',5,4],['Contenedor para llevar',5,5]];
 const XIMG=['img/x-cafe-pan.webp','img/x-pan.webp','img/x-sobre.webp','img/x-jarra.webp','img/x-agua.webp','img/x-contenedor.webp'];
@@ -662,7 +662,7 @@ document.querySelectorAll('.plato,.galeria figure').forEach((p,k)=>{p.style.tran
 /* ---------- Portada: focos y franja ---------- */
 const focos=[];for(let k=0;k<26;k++){const x=k*48+10,y=100+Math.sin(k*.9)*14+((k%5)*3);focos.push(`<line x1="${x}" y1="${y-14}" x2="${x}" y2="${y}" stroke="#3a2a17" stroke-width="1.5"/><circle class="foco" cx="${x}" cy="${y+6}" r="7" fill="#ffd98a" style="animation-delay:${-(k%7)*.4}s;filter:drop-shadow(0 0 8px #ffcf6a)"/>`)}
 $('#focos').innerHTML=focos.join('');
-const fr=['Café recién molido','Pan dulce del día','Desayunos desde $39','Frappés','Pide por WhatsApp','Bajo la sombra del árbol'];
+const fr=['Café recién molido','Pan dulce del día','Desayunos desde $49','Frappés','Pide por WhatsApp','Bajo la sombra del árbol'];
 $('#franja').innerHTML=[...fr,...fr,...fr,...fr].map(t=>`<span>${t}</span>`).join('');
 
 /* ---------- Horario ---------- */
