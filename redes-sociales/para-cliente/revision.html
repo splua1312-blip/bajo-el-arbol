@@ -1,0 +1,336 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<title>Revisión de contenido · Bajo el Árbol</title>
+<link rel="stylesheet" href="../fuente/fuentes.css">
+<style>
+@page { size: Letter; margin: 14mm 14mm 16mm; }
+:root{--verde:#1d3f26;--bosque:#0f1f14;--oro:#b48a45;--crema:#fbf3e4;--papel:#f4ead8;--tinta:#1c2a1e;--cafe:#3f2412;--linea:#e2d3b5}
+*{box-sizing:border-box}
+body{margin:0;font:400 10.5pt/1.45 "Barlow",Arial,sans-serif;color:var(--tinta)}
+h1,h2,h3,h4{margin:0;font-family:"Playfair Display",Georgia,serif;color:var(--verde)}
+p{margin:0}
+.portada{height:248mm;display:flex;flex-direction:column;justify-content:center;page-break-after:always;position:relative}
+.portada .franja{position:absolute;top:0;left:0;right:0;height:6mm;background:var(--verde);border-bottom:2mm solid var(--oro)}
+.portada img.logo{width:42mm;margin-bottom:10mm}
+.portada .eti{font:600 10pt/1 "Barlow Condensed",sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--oro)}
+.portada h1{font-size:34pt;line-height:1.05;margin-top:4mm}
+.portada .sub{font-size:13pt;margin-top:4mm;color:#4a4a4a}
+.portada table{margin-top:14mm}
+.intro{margin-top:12mm;font-size:11pt;max-width:165mm}
+table{border-collapse:collapse;width:100%}
+th,td{text-align:left;padding:2.2mm 3mm;border-bottom:.3mm solid var(--linea);vertical-align:top}
+th{background:var(--verde);color:#fff;font:600 9.5pt/1.2 "Barlow",sans-serif}
+tr:nth-child(even) td{background:#faf5ea}
+.datos td:first-child{font-weight:600;color:var(--verde);width:42mm}
+.datos td{background:none!important}
+h2.sec{font-size:18pt;margin:0 0 4mm}
+.pasos{counter-reset:p;margin:0 0 6mm;padding:0;list-style:none}
+.pasos li{counter-increment:p;position:relative;padding:2mm 0 2mm 11mm}
+.pasos li::before{content:counter(p);position:absolute;left:0;top:1.4mm;width:7mm;height:7mm;border-radius:50%;background:var(--oro);color:#fff;font:700 10pt/7mm "Barlow",sans-serif;text-align:center}
+.bloque{page-break-after:always}
+.semana{page-break-before:always}
+.cab-semana{display:flex;justify-content:space-between;align-items:flex-end;border-bottom:.8mm solid var(--oro);padding-bottom:3mm;margin-bottom:5mm}
+.cab-semana h2{font-size:20pt}
+.cab-semana p{color:#6b5a3e;font-size:11pt}
+.limite{background:#fff4d6;border:.3mm solid #e8c97a;color:#7a5410;border-radius:2mm;padding:1.5mm 3mm;font:600 9pt/1.2 "Barlow",sans-serif}
+.pieza{border:.3mm solid var(--linea);border-radius:3mm;padding:4mm 5mm;margin-bottom:4mm;page-break-inside:avoid;background:#fff}
+.pieza header{display:flex;gap:4mm;align-items:center;margin-bottom:4mm}
+.pieza .id{flex:none;background:var(--verde);color:#fff;border-radius:2mm;padding:1.5mm 3mm;font:700 11pt/1 "Barlow",sans-serif}
+.pieza h3{font-size:14pt}
+.pieza header p{color:#6b5a3e;font-size:9.5pt}
+.galeria{display:flex;gap:3mm;margin-bottom:4mm;justify-content:center}
+.galeria img{display:block;width:100%;border-radius:1.5mm;border:.3mm solid var(--linea)}
+.galeria.una img{width:78mm}
+.pieza.lado .cuerpo{display:grid;grid-template-columns:50mm 1fr;gap:5mm;align-items:start}
+.pieza.lado .galeria{margin:0}
+.pieza.lado .galeria.una img{width:50mm}
+.grupo{break-inside:avoid;page-break-inside:avoid}
+.galeria.varias figure{margin:0;flex:1}
+.galeria.historias figure{margin:0;width:29mm}
+.galeria figcaption{text-align:center;font:600 8pt/1 "Barlow",sans-serif;color:#8a7650;margin-top:1.2mm}
+h4{font:600 8.5pt/1 "Barlow Condensed",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--oro);margin-bottom:1.5mm}
+.texto pre{white-space:pre-wrap;font:400 9pt/1.4 "Barlow",sans-serif;background:var(--papel);border-radius:2mm;padding:3mm 4mm;margin:0}
+mark{background:#ffe08a;padding:0 1mm}
+.guion ol{margin:0 0 4mm;padding-left:5mm;font-size:9.5pt}
+.confirmar{margin-top:3mm;background:#fff7e0;border-left:1.2mm solid #e0a92e;border-radius:1.5mm;padding:2.5mm 4mm}
+.confirmar ul{margin:0;padding-left:5mm;font-size:9.5pt}
+.nota{margin-top:3mm;font-size:9pt;color:#5d5d5d;font-style:italic}
+.decision{margin-top:4mm;border-top:.3mm dashed #cbb88f;padding-top:3mm;display:flex;flex-wrap:wrap;gap:3mm 8mm;font:600 9.5pt/1 "Barlow",sans-serif;color:var(--verde)}
+.decision span{display:flex;align-items:center;gap:2mm}
+.decision i{width:4.5mm;height:4.5mm;border:.4mm solid var(--verde);border-radius:1mm;display:inline-block}
+.decision .cambios{flex-basis:100%;font-weight:400;color:#6b6b6b;border-bottom:.3mm solid #d9cdb4;padding-bottom:6mm}
+.respaldo .galeria figure{margin:0;flex:1}
+.firma td{height:9mm}
+.firma td:nth-child(3),.firma td:nth-child(4){width:30mm}
+.lineas{display:grid;grid-template-columns:1fr 1fr;gap:10mm;margin-top:12mm}
+.lineas div{border-top:.3mm solid #555;padding-top:2mm;font-size:9.5pt;color:#555}
+.pie-doc{margin-top:8mm;font-size:9pt;color:#6b6b6b}
+</style></head><body>
+
+<section class="portada">
+  <div class="franja"></div>
+  <img class="logo" src="../fuente/img/logo.webp">
+  <div class="eti">Revisión y autorización de contenido</div>
+  <h1>Publicaciones para Facebook<br>e Instagram</h1>
+  <p class="sub">Panadería y Cafetería <b>Bajo el Árbol</b> · Temporada navideña 2026 · Semanas 1 a 3 (12 al 27 de noviembre)</p>
+  <table class="datos">
+    <tr><td>Preparado por</td><td>Santiago Raúl Cortés Cortés</td></tr>
+    <tr><td>Contacto</td><td>WhatsApp 222 954 9368</td></tr>
+    <tr><td>Fecha</td><td>9 de noviembre de 2026</td></tr>
+    <tr><td>Referencia</td><td>Plan de trabajo y calendario de contenido navideño</td></tr>
+  </table>
+  <p class="intro">Como acordamos en el plan de trabajo, ninguna publicación sale sin su autorización. En este documento
+  encontrará cada imagen, la fecha en que se publicaría, el texto que la acompaña y los datos que necesitamos que nos confirme.</p>
+</section>
+
+<section class="bloque">
+  <h2 class="sec">Cómo revisar este documento</h2>
+  <ol class="pasos">
+    <li>Revise cada pieza (P1 a P11): la imagen, el texto y los datos marcados en amarillo.</li>
+    <li>Marque en cada una <b>Aprobado</b>, <b>Aprobado con cambios</b> o <b>No publicar</b>, y anote los cambios que quiera.</li>
+    <li>Respóndanos por WhatsApp. Basta un mensaje como <i>"Apruebo P1, P3 y P6. En P2 la promoción es café americano + concha a $35"</i>, o una foto de la última página firmada.</li>
+    <li>Envíe los datos pendientes de la tabla de abajo. Las piezas que dependen de un dato no se publican hasta tenerlo.</li>
+  </ol>
+  <h2 class="sec">Resumen de publicaciones</h2>
+  <table><tr><th>Pieza</th><th>Fecha</th><th>Publicación</th><th>Formato</th></tr><tr><td>P1</td><td>Jueves 12 de noviembre</td><td>Conoce Bajo el Árbol</td><td>Carrusel de 5 imágenes</td></tr><tr><td>P2</td><td>Viernes 13 de noviembre</td><td>Fin de semana largo</td><td>Publicación</td></tr><tr><td>P3</td><td>Jueves 12 al sábado 14 de noviembre</td><td>Historias de la semana</td><td>3 historias</td></tr><tr><td>P4</td><td>Lunes 16 de noviembre (día festivo)</td><td>Desayuno de puente</td><td>Publicación</td></tr><tr><td>P5</td><td>Miércoles 18 de noviembre</td><td>Detrás de cámaras: así se prepara el pan</td><td>Video corto (15 a 25 s)</td></tr><tr><td>P6</td><td>Viernes 20 de noviembre</td><td>Desayunos Bajo el Árbol</td><td>Carrusel de 5 imágenes</td></tr><tr><td>P7</td><td>Durante la semana 2</td><td>Historias de la semana</td><td>3 historias</td></tr><tr><td>P8</td><td>Lunes 23 de noviembre</td><td>Regalos Bajo el Árbol: preventa de cajas de pan</td><td>Publicación</td></tr><tr><td>P9</td><td>Miércoles 25 de noviembre</td><td>Así preparamos tu capuchino</td><td>Video corto (15 a 25 s)</td></tr><tr><td>P10</td><td>Viernes 27 de noviembre</td><td>Llegó la Navidad al local</td><td>Publicación y video</td></tr>
+  <tr><td>P11</td><td>Según se necesite</td><td>Piezas de respaldo y anuncios</td><td>5 imágenes</td></tr></table>
+  <div class="grupo"><h2 class="sec" style="margin-top:8mm">Datos que necesitamos de usted</h2>
+  <table><tr><th>#</th><th>Dato</th><th>Para</th><th>Antes del</th></tr><tr><td>1</td><td>Producto y precio de la promoción de fin de semana largo</td><td>P2</td><td>11 nov</td></tr><tr><td>2</td><td>¿Abren el lunes 16 de noviembre? ¿En qué horario?</td><td>P4</td><td>11 nov</td></tr><tr><td>3</td><td>Promoción exclusiva de los anuncios (por ejemplo: menciona el anuncio y llévate un pan de regalo con tu café)</td><td>Anuncios</td><td>11 nov</td></tr><tr><td>4</td><td>Acceso de administrador en Meta Business Suite y tarjeta registrada en la cuenta publicitaria</td><td>Anuncios</td><td>11 nov</td></tr><tr><td>5</td><td>Confirmar precios del menú de cafés y desayunos</td><td>P1, P6</td><td>13 nov</td></tr><tr><td>6</td><td>Fecha para la visita al local (fotos y videos)</td><td>P5, P9</td><td>13 nov</td></tr><tr><td>7</td><td>Contenido, precio y foto de las cajas de regalo</td><td>P8</td><td>20 nov</td></tr><tr><td>8</td><td>Día en que el local estará decorado</td><td>P10</td><td>20 nov</td></tr></table></div>
+</section>
+
+
+<section class="semana">
+  <div class="cab-semana"><div><h2>Semana 1 · 10 al 15 de noviembre</h2><p>Arranque y fin de semana largo</p></div>
+  <span class="limite">Responder a más tardar el miércoles 11 de noviembre</span></div>
+  
+<article class="pieza">
+  <header>
+    <span class="id">P1</span>
+    <div><h3>Conoce Bajo el Árbol</h3><p>Jueves 12 de noviembre · Carrusel de 5 imágenes</p></div>
+  </header>
+  <div class="cuerpo"><div class="galeria varias"><figure><img src=".vistas/publicaciones__01-bienvenida.jpg"><figcaption>1</figcaption></figure><figure><img src=".vistas/publicaciones__04-nuestros-cafes.jpg"><figcaption>2</figcaption></figure><figure><img src=".vistas/publicaciones__02-desayunos.jpg"><figcaption>3</figcaption></figure><figure><img src=".vistas/publicaciones__07-como-pedir.jpg"><figcaption>4</figcaption></figure><figure><img src=".vistas/publicaciones__09-visitanos.jpg"><figcaption>5</figcaption></figure></div>
+  
+  <div class="texto"><h4>Texto de la publicación</h4><pre>Un lugar para disfrutar, compartir y crear momentos inolvidables. 🌳☕
+
+Somos Bajo el Árbol, panadería y café en INFONAVIT San José Xilotzingo. Desliza y conoce nuestros cafés, desayunos y cómo pedir. 👉
+
+📍 Camelia local C, INFONAVIT San José Xilotzingo, Puebla
+🕖 7:00 AM a 9:00 PM
+📲 Pide por WhatsApp al 223 143 0025 o visítanos.
+
+#BajoElArbol #CafeteriaPuebla #CafePuebla #Xilotzingo #PanaderiaPuebla #DesayunosPuebla</pre></div>
+  <div class="confirmar"><h4>Necesitamos que nos confirme</h4><ul><li>Que los precios de cafés y desayunos sigan vigentes.</li><li>Que el horario de 7:00 AM a 9:00 PM aplique todos los días que abren.</li></ul></div>
+  <p class="nota">Este carrusel también se usará en el anuncio para darse a conocer en la zona.</p>
+  <div class="decision">
+    <span><i></i>Aprobado</span><span><i></i>Aprobado con cambios</span><span><i></i>No publicar</span>
+    <div class="cambios">Cambios o comentarios:</div>
+  </div></div>
+</article>
+<article class="pieza lado">
+  <header>
+    <span class="id">P2</span>
+    <div><h3>Fin de semana largo</h3><p>Viernes 13 de noviembre · Publicación</p></div>
+  </header>
+  <div class="cuerpo"><div class="col-img"><div class="galeria una"><img src=".vistas/temporada-navidad__2026-11-13-fin-de-semana-largo.jpg"></div></div><div class="col-txt">
+  
+  <div class="texto"><h4>Texto de la publicación</h4><pre>¡Llegó el fin de semana largo! ☕🥐
+
+Del viernes 13 al martes 17 de noviembre: <mark>[PRODUCTO Y PRECIO DE LA PROMOCIÓN]</mark>.
+
+Ven a disfrutarlo bajo el árbol o pídelo por WhatsApp al 223 143 0025.
+
+📍 Camelia local C, INFONAVIT San José Xilotzingo
+🕖 7:00 AM a 9:00 PM
+
+#BajoElArbol #FinDeSemanaLargo #CafeYPan #CafePuebla #Xilotzingo</pre></div>
+  <div class="confirmar"><h4>Necesitamos que nos confirme</h4><ul><li>¿Qué incluye la promoción de café con pan y cuál es su precio?</li></ul></div>
+  <p class="nota">El precio va solo en el texto, por eso la imagen no cambia. No se usa el nombre &quot;El Buen Fin&quot;, porque solo pueden usarlo los comercios registrados.</p>
+  <div class="decision">
+    <span><i></i>Aprobado</span><span><i></i>Aprobado con cambios</span><span><i></i>No publicar</span>
+    <div class="cambios">Cambios o comentarios:</div>
+  </div></div></div>
+</article>
+<article class="pieza">
+  <header>
+    <span class="id">P3</span>
+    <div><h3>Historias de la semana</h3><p>Jueves 12 al sábado 14 de noviembre · 3 historias</p></div>
+  </header>
+  <div class="cuerpo"><div class="galeria historias"><figure><img src=".vistas/historias__03-ya-abrimos.jpg"><figcaption>1</figcaption></figure><figure><img src=".vistas/historias__01-grupo-whatsapp.jpg"><figcaption>2</figcaption></figure><figure><img src=".vistas/historias__02-encuesta.jpg"><figcaption>3</figcaption></figure></div>
+  
+  <div class="texto"><h4>Texto de la publicación</h4><pre>Jueves: &quot;Ya estamos tomando pedidos&quot;, con botón para escribir por WhatsApp.
+Viernes: invitación al grupo de WhatsApp, con el código QR y un botón para unirse.
+Sábado: encuesta &quot;¿Calientito o frappé?&quot;.</pre></div>
+  <div class="confirmar"><h4>Necesitamos que nos confirme</h4><ul><li>Que el código QR y el enlace del grupo de WhatsApp sigan funcionando.</li></ul></div>
+  
+  <div class="decision">
+    <span><i></i>Aprobado</span><span><i></i>Aprobado con cambios</span><span><i></i>No publicar</span>
+    <div class="cambios">Cambios o comentarios:</div>
+  </div></div>
+</article>
+</section>
+<section class="semana">
+  <div class="cab-semana"><div><h2>Semana 2 · 16 al 22 de noviembre</h2><p>Desayunos</p></div>
+  <span class="limite">Responder a más tardar el viernes 13 de noviembre</span></div>
+  
+<article class="pieza lado">
+  <header>
+    <span class="id">P4</span>
+    <div><h3>Desayuno de puente</h3><p>Lunes 16 de noviembre (día festivo) · Publicación</p></div>
+  </header>
+  <div class="cuerpo"><div class="col-img"><div class="galeria una"><img src=".vistas/temporada-navidad__2026-11-16-lunes-festivo.jpg"></div></div><div class="col-txt">
+  
+  <div class="texto"><h4>Texto de la publicación</h4><pre>Lunes de puente = desayuno sin prisas. 🍳☕
+
+Hoy también te esperamos de 7:00 AM a 9:00 PM. Desayunos desde $39: huevos al gusto, chilaquiles, enchiladas, arrachera y más.
+
+📲 Pide por WhatsApp al 223 143 0025 y pasa por él, o desayuna con nosotros.
+
+#BajoElArbol #DesayunosPuebla #DiaFestivo #Xilotzingo #CafeteriaPuebla</pre></div>
+  <div class="confirmar"><h4>Necesitamos que nos confirme</h4><ul><li>¿Abren el lunes 16? ¿En el horario de siempre, de 7:00 AM a 9:00 PM?</li></ul></div>
+  
+  <div class="decision">
+    <span><i></i>Aprobado</span><span><i></i>Aprobado con cambios</span><span><i></i>No publicar</span>
+    <div class="cambios">Cambios o comentarios:</div>
+  </div></div></div>
+</article>
+<article class="pieza sin-imagen">
+  <header>
+    <span class="id">P5</span>
+    <div><h3>Detrás de cámaras: así se prepara el pan</h3><p>Miércoles 18 de noviembre · Video corto (15 a 25 s)</p></div>
+  </header>
+  <div class="cuerpo">
+  <div class="guion"><h4>Tomas del video</h4><ol><li>Manos amasando o formando conchas · texto: &quot;¿Alguna vez viste cómo nace tu pan?&quot;</li><li>Charola entrando al horno · texto: &quot;Todo empieza muy temprano&quot;</li><li>Pan saliendo del horno, con vapor</li><li>Pan en la vitrina junto a una taza de café</li><li>Logotipo o fachada · texto: &quot;Síguenos para más&quot;</li></ol></div>
+  <div class="texto"><h4>Texto de la publicación</h4><pre>Así empieza el día en Bajo el Árbol. 🥐 Síguenos para ver más de lo que pasa detrás del mostrador. 📲 223 143 0025</pre></div>
+  <div class="confirmar"><h4>Necesitamos que nos confirme</h4><ul><li>Día y hora en que se hornea el pan, para grabar durante la visita al local.</li></ul></div>
+  <p class="nota">Se aprueba la idea; el video terminado se le enviará antes de publicarlo.</p>
+  <div class="decision">
+    <span><i></i>Aprobado</span><span><i></i>Aprobado con cambios</span><span><i></i>No publicar</span>
+    <div class="cambios">Cambios o comentarios:</div>
+  </div></div>
+</article>
+<article class="pieza">
+  <header>
+    <span class="id">P6</span>
+    <div><h3>Desayunos Bajo el Árbol</h3><p>Viernes 20 de noviembre · Carrusel de 5 imágenes</p></div>
+  </header>
+  <div class="cuerpo"><div class="galeria varias"><figure><img src=".vistas/temporada-navidad__2026-11-20-carrusel-desayunos-1.jpg"><figcaption>1</figcaption></figure><figure><img src=".vistas/temporada-navidad__2026-11-20-carrusel-desayunos-2.jpg"><figcaption>2</figcaption></figure><figure><img src=".vistas/temporada-navidad__2026-11-20-carrusel-desayunos-3.jpg"><figcaption>3</figcaption></figure><figure><img src=".vistas/temporada-navidad__2026-11-20-carrusel-desayunos-4.jpg"><figcaption>4</figcaption></figure><figure><img src=".vistas/temporada-navidad__2026-11-20-carrusel-desayunos-5.jpg"><figcaption>5</figcaption></figure></div>
+  
+  <div class="texto"><h4>Texto de la publicación</h4><pre>Desayunos hechos con amor, para empezar tu día perfecto. 🍳
+
+Desliza y elige el tuyo 👉
+01 Huevos al gusto — $39
+02 Bisteck o pechuga asada — $49
+03 Chilaquiles — $49 / $59
+04 Enchiladas (5) — $49
+05 Pechuga empanizada — $49
+06 Tacos dorados (5) — $49
+07 Arrachera — $69
+08 Sopes (5) — $49 / $69
+09 Enfrijoladas con pollo (5) — $49
+
+☕ Café + pan dulce: $20
+🥡 Para llevar: +$5 por contenedor
+
+📲 Reserva o pide por WhatsApp: 223 143 0025
+🕖 Desde las 7:00 AM
+
+#BajoElArbol #DesayunosPuebla #Chilaquiles #Xilotzingo #ComidaMexicana</pre></div>
+  <div class="confirmar"><h4>Necesitamos que nos confirme</h4><ul><li>Que los 9 platillos y sus precios estén vigentes.</li></ul></div>
+  
+  <div class="decision">
+    <span><i></i>Aprobado</span><span><i></i>Aprobado con cambios</span><span><i></i>No publicar</span>
+    <div class="cambios">Cambios o comentarios:</div>
+  </div></div>
+</article>
+<article class="pieza">
+  <header>
+    <span class="id">P7</span>
+    <div><h3>Historias de la semana</h3><p>Durante la semana 2 · 3 historias</p></div>
+  </header>
+  <div class="cuerpo"><div class="galeria varias"><figure><img src=".vistas/publicaciones__06-frappes.jpg"><figcaption>1</figcaption></figure><figure><img src=".vistas/publicaciones__08-opinion.jpg"><figcaption>2</figcaption></figure></div>
+  
+  <div class="texto"><h4>Texto de la publicación</h4><pre>1) Frappés con encuesta &quot;¿Moka u Oreo?&quot;.
+2) Opinión de un cliente en Google (sin mostrar su nombre).
+3) Un clip corto del video del pan (P5).</pre></div>
+  
+  
+  <div class="decision">
+    <span><i></i>Aprobado</span><span><i></i>Aprobado con cambios</span><span><i></i>No publicar</span>
+    <div class="cambios">Cambios o comentarios:</div>
+  </div></div>
+</article>
+</section>
+<section class="semana">
+  <div class="cab-semana"><div><h2>Semana 3 · 23 al 29 de noviembre</h2><p>Arranque navideño</p></div>
+  <span class="limite">Responder a más tardar el viernes 20 de noviembre</span></div>
+  
+<article class="pieza sin-imagen">
+  <header>
+    <span class="id">P8</span>
+    <div><h3>Regalos Bajo el Árbol: preventa de cajas de pan</h3><p>Lunes 23 de noviembre · Publicación</p></div>
+  </header>
+  <div class="cuerpo">
+  
+  <div class="texto"><h4>Texto de la publicación</h4><pre>La pieza se diseña en cuanto se reciba la información de las cajas.</pre></div>
+  <div class="confirmar"><h4>Necesitamos que nos confirme</h4><ul><li>¿Qué contiene cada caja de regalo y cuál es su precio?</li><li>Una foto de la caja (o la tomamos en la visita al local).</li><li>¿Con cuántos días de anticipación deben apartarse?</li></ul></div>
+  
+  <div class="decision">
+    <span><i></i>Aprobado</span><span><i></i>Aprobado con cambios</span><span><i></i>No publicar</span>
+    <div class="cambios">Cambios o comentarios:</div>
+  </div></div>
+</article>
+<article class="pieza sin-imagen">
+  <header>
+    <span class="id">P9</span>
+    <div><h3>Así preparamos tu capuchino</h3><p>Miércoles 25 de noviembre · Video corto (15 a 25 s)</p></div>
+  </header>
+  <div class="cuerpo">
+  <div class="guion"><h4>Tomas del video</h4><ol><li>Granos cayendo al molino · texto: &quot;Del grano…&quot;</li><li>Molienda y preparación del espresso · texto: &quot;…recién molido&quot;</li><li>Vaporizado de la leche</li><li>Arte latte en la taza · texto: &quot;…a tu taza&quot;</li><li>Taza servida bajo el árbol · texto: &quot;Capuchino desde $40 · Ven por el tuyo&quot;</li></ol></div>
+  <div class="texto"><h4>Texto de la publicación</h4><pre>Del grano a la taza: así preparamos tu capuchino. ☕ Mediano $40 · Grande $50. Ven por el tuyo o pídelo al 223 143 0025.</pre></div>
+  
+  <p class="nota">Se aprueba la idea; el video terminado se le enviará antes de publicarlo.</p>
+  <div class="decision">
+    <span><i></i>Aprobado</span><span><i></i>Aprobado con cambios</span><span><i></i>No publicar</span>
+    <div class="cambios">Cambios o comentarios:</div>
+  </div></div>
+</article>
+<article class="pieza sin-imagen">
+  <header>
+    <span class="id">P10</span>
+    <div><h3>Llegó la Navidad al local</h3><p>Viernes 27 de noviembre · Publicación y video</p></div>
+  </header>
+  <div class="cuerpo">
+  <div class="guion"><h4>Tomas del video</h4><ol><li>Paneo del árbol y la terraza con luces, al atardecer · &quot;Llegó la Navidad bajo el árbol&quot;</li><li>Detalles de la decoración: luces, adornos, mesas</li><li>Chocolate caliente sobre una mesa decorada · &quot;Ven a tomarte la foto&quot;</li><li>Fachada con dirección y horario</li></ol></div>
+  <div class="texto"><h4>Texto de la publicación</h4><pre>La Navidad ya llegó a Bajo el Árbol. 🎄✨ Ven a tomarte la foto con nuestras luces y acompáñala con un café. 📍 Camelia local C, INFONAVIT San José Xilotzingo.</pre></div>
+  <div class="confirmar"><h4>Necesitamos que nos confirme</h4><ul><li>¿Qué día estará decorado el local, para tomar las fotos y el video?</li></ul></div>
+  <p class="nota">Este video se usará también en el anuncio para darse a conocer en la zona.</p>
+  <div class="decision">
+    <span><i></i>Aprobado</span><span><i></i>Aprobado con cambios</span><span><i></i>No publicar</span>
+    <div class="cambios">Cambios o comentarios:</div>
+  </div></div>
+</article>
+</section>
+
+<section class="semana respaldo">
+  <div class="cab-semana"><div><h2>Piezas de respaldo y anuncios</h2><p>Se usan cuando se necesitan</p></div></div>
+  <article class="pieza">
+    <header><span class="id">P11</span><div><h3>Piezas de respaldo y anuncios</h3><p>Desayunos · Chilaquiles · Café + pan · Frappés · Opinión</p></div></header>
+    <div class="galeria varias"><figure><img src=".vistas/publicaciones__02-desayunos.jpg"></figure><figure><img src=".vistas/publicaciones__05-chilaquiles.jpg"></figure><figure><img src=".vistas/publicaciones__03-cafe-y-pan.jpg"></figure><figure><img src=".vistas/publicaciones__06-frappes.jpg"></figure><figure><img src=".vistas/publicaciones__08-opinion.jpg"></figure></div>
+    <p style="font-size:9.5pt">Desayunos y Chilaquiles son las dos versiones del anuncio de mensajes por WhatsApp del 16 al 22 de noviembre; después se deja activa la que consiga mensajes a menor costo. Café + pan, Frappés y Opinión se publican si algún dato pendiente no llega a tiempo, para no dejar días vacíos.</p>
+    <div class="decision"><span><i></i>Aprobado</span><span><i></i>Aprobado con cambios</span><span><i></i>No publicar</span>
+    <div class="cambios">Cambios o comentarios:</div></div>
+  </article>
+  <h2 class="sec" style="margin-top:6mm">Anuncios pagados</h2>
+  <p style="font-size:10pt">Presupuesto de <b>$1,000 MXN al mes</b>, pagado directamente a Meta con la tarjeta del negocio:
+  <b>$700</b> para que los clientes escriban por WhatsApp y <b>$300</b> para darse a conocer entre los vecinos en un radio de
+  <b>2 a 3 km</b>. Cada semana le enviaremos por WhatsApp el gasto, las personas alcanzadas, los mensajes recibidos y las promociones usadas.</p>
+</section>
+
+<section class="semana">
+  <div class="cab-semana"><div><h2>Autorización</h2><p>Marque cada pieza y firme</p></div></div>
+  <table class="firma"><tr><th>Pieza</th><th>Publicación</th><th>Aprobada (sí / no)</th><th>Iniciales</th></tr><tr><td>P1</td><td>Conoce Bajo el Árbol</td><td></td><td></td></tr><tr><td>P2</td><td>Fin de semana largo</td><td></td><td></td></tr><tr><td>P3</td><td>Historias de la semana</td><td></td><td></td></tr><tr><td>P4</td><td>Desayuno de puente</td><td></td><td></td></tr><tr><td>P5</td><td>Detrás de cámaras: así se prepara el pan</td><td></td><td></td></tr><tr><td>P6</td><td>Desayunos Bajo el Árbol</td><td></td><td></td></tr><tr><td>P7</td><td>Historias de la semana</td><td></td><td></td></tr><tr><td>P8</td><td>Regalos Bajo el Árbol: preventa de cajas de pan</td><td></td><td></td></tr><tr><td>P9</td><td>Así preparamos tu capuchino</td><td></td><td></td></tr><tr><td>P10</td><td>Llegó la Navidad al local</td><td></td><td></td></tr><tr><td>P11</td><td>Piezas de respaldo y anuncios</td><td></td><td></td></tr></table>
+  <p class="pie-doc">Al firmar, el cliente autoriza la publicación de las piezas marcadas como aprobadas, con los cambios anotados.
+  Las piezas que dependen de un dato pendiente se publicarán una vez recibido ese dato.</p>
+  <div class="lineas"><div>Nombre y firma del cliente</div><div>Fecha</div></div>
+</section>
+</body></html>

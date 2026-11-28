@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="es"><head><meta charset="utf-8">
+<title>Guía de trabajo · Bajo el Árbol</title>
+<link rel="stylesheet" href="/home/user/bajo-el-arbol/redes-sociales/fuente/fuentes.css">
+<style>
+@page { size: Letter; margin: 15mm 15mm 16mm; }
+:root{--verde:#1d3f26;--bosque:#0f1f14;--oro:#b48a45;--crema:#fbf3e4;--papel:#f4ead8;--tinta:#1c2a1e;--linea:#e2d3b5}
+*{box-sizing:border-box}
+body{margin:0;font:400 10.5pt/1.5 "Barlow",Arial,sans-serif;color:var(--tinta)}
+h1,h2,h3{font-family:"Playfair Display",Georgia,serif;color:var(--verde);margin:0}
+p{margin:0 0 2.5mm}
+.portada{height:245mm;display:flex;flex-direction:column;justify-content:center;page-break-after:always;position:relative}
+.portada .franja{position:absolute;top:0;left:0;right:0;height:6mm;background:var(--verde);border-bottom:2mm solid var(--oro)}
+.portada img{width:40mm;margin-bottom:10mm}
+.eti{font:600 10pt/1 "Barlow Condensed",sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--oro)}
+.portada h1{font-size:32pt;line-height:1.08;margin-top:4mm}
+.portada .sub{font-size:13pt;color:#4a4a4a;margin-top:4mm;max-width:160mm}
+.portada .indice{margin-top:14mm;columns:2;column-gap:10mm;font-size:10.5pt}
+.portada .indice div{padding:1.5mm 0;border-bottom:.3mm solid var(--linea);break-inside:avoid}
+.portada .indice b{color:var(--oro);margin-right:2mm}
+section{page-break-before:always}
+section.sigue{page-break-before:auto;margin-top:9mm}
+h2{font-size:19pt;margin-bottom:1mm}
+h2 + .lead{color:#6b5a3e;font-size:11pt;margin-bottom:5mm;border-bottom:.8mm solid var(--oro);padding-bottom:3mm}
+h3{font-size:12.5pt;margin:5mm 0 2mm}
+table{border-collapse:collapse;width:100%;margin:2mm 0 4mm;font-size:9.8pt}
+th,td{text-align:left;padding:2mm 2.8mm;border-bottom:.3mm solid var(--linea);vertical-align:top}
+th{background:var(--verde);color:#fff;font-weight:600}
+tr:nth-child(even) td{background:#faf5ea}
+td:first-child{font-weight:600;color:var(--verde)}
+.arbol{font:400 9.6pt/1.5 "Barlow",sans-serif;background:var(--papel);border-radius:2.5mm;padding:4mm 5mm;white-space:pre;margin:2mm 0 4mm}
+.arbol b{color:var(--verde)}
+.arbol i{color:#8a7650;font-style:normal}
+ol.pasos{counter-reset:p;list-style:none;padding:0;margin:2mm 0 4mm}
+ol.pasos>li{counter-increment:p;position:relative;padding:1.5mm 0 2.5mm 11mm}
+ol.pasos>li::before{content:counter(p);position:absolute;left:0;top:1mm;width:7mm;height:7mm;border-radius:50%;background:var(--oro);color:#fff;font:700 10pt/7mm "Barlow",sans-serif;text-align:center}
+.prompt{border:.3mm solid var(--linea);border-left:1.4mm solid var(--verde);border-radius:2mm;padding:2.2mm 3.5mm;margin:0 0 2.4mm;background:#fff;break-inside:avoid}
+.prompt .t{font:600 8.5pt/1 "Barlow Condensed",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--oro);margin-bottom:1.3mm}
+.prompt .c{font:400 9.4pt/1.38 "Barlow",sans-serif;background:var(--papel);border-radius:1.5mm;padding:2mm 3mm}
+.prompt .cuando{font-size:9pt;color:#6b6b6b;margin-top:1.5mm}
+.flujo{display:flex;gap:1.5mm;margin:3mm 0 5mm}
+.flujo div{flex:1;background:var(--verde);color:#fff;border-radius:2mm;padding:3mm 2mm;text-align:center;font:600 9pt/1.25 "Barlow",sans-serif;position:relative}
+.flujo div span{display:block;font:400 8pt/1.25 "Barlow",sans-serif;color:#e6cd97;margin-top:1mm}
+.flujo div:nth-child(3),.flujo div:nth-child(4){background:var(--oro)}
+.aviso{background:#fff7e0;border-left:1.2mm solid #e0a92e;border-radius:1.5mm;padding:3mm 4mm;margin:3mm 0 4mm;font-size:10pt}
+.ok{background:#eaf4e6;border-left:1.2mm solid #4c8a3f;border-radius:1.5mm;padding:3mm 4mm;margin:3mm 0 4mm;font-size:10pt}
+.ref p{padding-left:10mm;text-indent:-10mm;font-size:9.8pt}
+.dos{display:grid;grid-template-columns:1fr 1fr;gap:5mm}
+.caja{border:.3mm solid var(--linea);border-radius:2.5mm;padding:4mm}
+.caja h3{margin-top:0}
+.caja ul{margin:0;padding-left:5mm;font-size:10pt}
+</style></head><body>
+
+<div class="portada">
+  <div class="franja"></div>
+  <img src="/home/user/bajo-el-arbol/redes-sociales/fuente/img/logo.webp">
+  <div class="eti">Guía de trabajo</div>
+  <h1>Cómo organizar y operar<br>el servicio de Bajo el Árbol</h1>
+  <p class="sub">Carpeta de trabajo, rutina semanal, control de tareas e instrucciones listas para Claude Cowork · Temporada navideña 2026</p>
+  <div class="indice">
+    <div><b>1</b>Su carpeta de trabajo</div>
+    <div><b>2</b>Primeros pasos: hoy</div>
+    <div><b>3</b>El ciclo de cada publicación</div>
+    <div><b>4</b>Rutina semanal</div>
+    <div><b>5</b>Instrucciones para Cowork</div>
+    <div><b>6</b>El control de tareas en Excel</div>
+    <div><b>7</b>Fechas clave</div>
+    <div><b>8</b>Cowork o Claude Code</div>
+  </div>
+</div>
+
+<section>
+  <h2>1. Su carpeta de trabajo</h2>
+  <p class="lead">Todo lo del cliente vive en una sola carpeta. Cada cosa tiene su lugar, y Claude sabe dónde buscarla.</p>
+<div class="arbol"><b>Bajo_el_Arbol/</b>
+├── <b>INSTRUCCIONES_PARA_CLAUDE.md</b>      <i>contexto, reglas y estado del trabajo (Claude lo lee primero)</i>
+├── <b>CONTROL_DE_TAREAS.xlsx</b>            <i>calendario, pendientes, rutina, reportes e indicadores</i>
+├── <b>00_GUIA_DE_TRABAJO.pdf</b>            <i>este documento</i>
+├── 01_Contrato_y_plan/            <i>plan de trabajo, calendario navideño y acuerdo firmado</i>
+├── 02_Marca/                      <i>logotipo, fotos, colores, tipografías y datos fijos</i>
+├── 03_Publicaciones/
+│   ├── 00_Banco_de_respaldo/      <i>piezas que no dependen de datos pendientes</i>
+│   ├── Semana_1_10-15nov/         <i>P1, P2, P3 + Textos_para_publicar.txt</i>
+│   ├── Semana_2_16-22nov/         <i>P4 a P7 + textos y guion del video</i>
+│   ├── Semana_3_23-29nov/         <i>guiones y pendientes de P8 a P10</i>
+│   └── Semana_4 … Semana_8/       <i>_PLAN_DE_LA_SEMANA.txt de cada una</i>
+├── 04_Revision_cliente/           <i>un envío por carpeta, con las respuestas del cliente</i>
+├── 05_Anuncios/                   <i>pauta, presupuesto y segmentación</i>
+├── 06_Reportes/                   <i>reportes semanales y final</i>
+├── 07_Material_del_local/         <i>fotos y videos originales de cada visita</i>
+└── 08_Plantillas_tecnicas/        <i>plantillas HTML (solo para Claude Code)</i></div>
+
+  <h3>Tres reglas para no revolverse</h3>
+  <table>
+    <tr><th style="width:42mm">Regla</th><th>Cómo se aplica</th></tr>
+    <tr><td>Una publicación, una carpeta</td><td>Dentro de cada semana: <i>P1_Carrusel_Conoce_12nov</i>, <i>P2_Fin_de_semana_largo_13nov</i>… Ahí van las imágenes; los textos de toda la semana están en <i>Textos_para_publicar.txt</i>.</td></tr>
+    <tr><td>Un solo lugar para el estado</td><td>Lo que está listo, enviado, aprobado o publicado se marca únicamente en <b>CONTROL_DE_TAREAS.xlsx</b>, no en notas sueltas ni en el chat.</td></tr>
+    <tr><td>Nombres con fecha</td><td>Piezas nuevas: <i>AAAA-MM-DD_tema.png</i>. Carruseles: <i>1_</i>, <i>2_</i>, <i>3_</i>… según el orden. Envíos: <i>Semanas_X-Y_enviado_AAAA-MM-DD</i>.</td></tr>
+  </table>
+</section>
+
+<section>
+  <h2>2. Primeros pasos: hoy</h2>
+  <p class="lead">Cinco pasos para dejar todo instalado y retomar el trabajo en Claude (Chat con funciones de Cowork).</p>
+  <ol class="pasos">
+    <li><b>Descargue y descomprima</b> el archivo <i>Bajo_el_Arbol_carpeta_de_trabajo.zip</i> en una ubicación fija, por ejemplo <i>Documentos/Clientes/</i>.</li>
+    <li><b>Abra la app de escritorio de Claude</b> (Mac o Windows) y entre a <b>Chat</b>. En la versión nueva de Claude, Cowork ya está integrado en Chat: solo verá las pestañas <b>Chat</b> y <b>Code</b>, y cualquier conversación de Chat puede hacer los trabajos de Cowork (Anthropic, s. f.-d). Si su caja de mensajes muestra las opciones "Chat" y "Cowork", elija <b>Cowork</b>. Para que Claude trabaje con archivos de su computadora, la app de escritorio debe estar abierta (Anthropic, s. f.-b).</li>
+    <li><b>Dé acceso a la carpeta <i>Bajo_el_Arbol</i></b>. Claude solo lee y escribe en las carpetas que usted conecte (Anthropic, s. f.-a, s. f.-c), que después aparecen en <i>Configuración → Carpetas de confianza</i> (Anthropic, s. f.-d). Recomendación: cree un <b>Proyecto</b> llamado <i>Bajo el Árbol</i> y pegue en sus instrucciones el contenido de <i>INSTRUCCIONES_PARA_CLAUDE.md</i>.</li>
+    <li><b>Dé la primera instrucción</b> (cópiela tal cual):
+      <div class="prompt" style="margin-top:2mm"><div class="c">Lee INSTRUCCIONES_PARA_CLAUDE.md y CONTROL_DE_TAREAS.xlsx. Dime en qué punto va el trabajo, qué toca esta semana y qué datos le faltan al cliente.</div></div></li>
+    <li><b>Envíe hoy al cliente</b> el PDF de revisión que está en <i>04_Revision_cliente/Semanas_1-3_por_enviar/</i>, con el texto de <i>mensaje_whatsapp.txt</i>. Después cambie el nombre de la carpeta a <i>Semanas_1-3_enviado_2026-11-10</i> y marque en el Excel la columna <b>Enviado a revisión</b>.</li>
+  </ol>
+  <div class="ok"><b>Consejo:</b> empiece siempre cada conversación de trabajo con la instrucción del paso 4. Así Claude retoma el contexto completo y no tiene que explicarle nada de nuevo.</div>
+  <div class="aviso"><b>Permisos:</b> en la caja de mensajes elija <b>Manual</b> mientras se familiariza; así Claude le pregunta antes de cada acción. El modo <b>Auto</b> viene activado por omisión (Anthropic, s. f.-d).</div>
+  <div class="aviso"><b>Privacidad:</b> las sesiones de Cowork se procesan en los servidores de Anthropic, incluidos los archivos locales que Claude abra (Anthropic, s. f.-c). Conecte solo la carpeta del cliente, no su carpeta personal completa.</div>
+</section>
+
+<section>
+  <h2>3. El ciclo de cada publicación</h2>
+  <p class="lead">Toda publicación pasa por los mismos siete pasos. El Excel registra en cuál va cada una.</p>
+  <div class="flujo">
+    <div>1. Planear<span>calendario</span></div>
+    <div>2. Diseñar<span>imagen y texto</span></div>
+    <div>3. Enviar<span>PDF de revisión</span></div>
+    <div>4. Aprobar<span>respuesta del dueño</span></div>
+    <div>5. Programar<span>Meta Business Suite</span></div>
+    <div>6. Publicar<span>feed e historias</span></div>
+    <div>7. Medir<span>reporte semanal</span></div>
+  </div>
+  <table>
+    <tr><th style="width:30mm">Paso</th><th>Qué se hace</th><th style="width:42mm">Columna del Excel</th></tr>
+    <tr><td>Planear</td><td>Revisar el calendario y los datos que faltan.</td><td>Pendientes cliente</td></tr>
+    <tr><td>Diseñar</td><td>Claude prepara la imagen y el texto en la carpeta de la semana.</td><td>Diseño = Listo</td></tr>
+    <tr><td>Enviar</td><td>PDF de revisión al cliente por WhatsApp, con <b>una semana de anticipación</b>.</td><td>Enviado a revisión = Sí</td></tr>
+    <tr><td>Aprobar</td><td>Registrar la respuesta y aplicar los cambios.</td><td>Aprobado = Sí / Con cambios</td></tr>
+    <tr><td>Programar</td><td>Subir la pieza aprobada con su texto y su fecha.</td><td>—</td></tr>
+    <tr><td>Publicar</td><td>Confirmar que salió y agregar los stickers de las historias.</td><td>Publicado = Sí</td></tr>
+    <tr><td>Medir</td><td>Capturar los números de la semana y enviar el reporte.</td><td>Reporte semanal</td></tr>
+  </table>
+  <div class="aviso"><b>Anticipación:</b> la revisión de la semana siguiente se envía cada <b>miércoles</b>. Así el cliente tiene hasta el jueves para responder y usted programa el viernes.</div>
+</section>
+
+<section>
+  <h2>4. Rutina semanal</h2>
+  <p class="lead">Una o dos tareas por día. La misma tabla está en la pestaña <i>Rutina semanal</i> del Excel para marcar ✓.</p>
+  <table>
+    <tr><th style="width:24mm">Día</th><th>Tareas</th><th style="width:44mm">Dónde</th></tr>
+    <tr><td>Lunes</td><td>Publicar la pieza del lunes y una historia.<br>Revisar las respuestas del cliente y actualizar el Calendario y los Pendientes.</td><td>Meta Business Suite<br>Excel</td></tr>
+    <tr><td>Martes</td><td>Preparar las piezas y los textos de la semana siguiente.<br>Revisar los anuncios: costo por mensaje de cada uno.</td><td>Cowork<br>Administrador de anuncios</td></tr>
+    <tr><td>Miércoles</td><td>Publicar la pieza del miércoles y una historia.<br>Enviar al cliente el PDF de revisión de la semana siguiente.</td><td>Meta Business Suite<br>Cowork + WhatsApp</td></tr>
+    <tr><td>Jueves</td><td>Aplicar los cambios que pidió el cliente.<br>Programar las publicaciones aprobadas.</td><td>Cowork<br>Meta Business Suite</td></tr>
+    <tr><td>Viernes</td><td>Publicar la pieza del viernes y una historia.<br>Llenar el Reporte semanal y enviarlo por WhatsApp.<br>Pasar el presupuesto al anuncio con menor costo por mensaje.</td><td>Meta Business Suite<br>Excel + Cowork<br>Administrador de anuncios</td></tr>
+  </table>
+  <h3>Visita mensual al local</h3>
+  <p>Una vez al mes, según el plan. Lleve los guiones de video de la carpeta de la semana. Al volver, copie las fotos y los videos a <i>07_Material_del_local/Visita_AAAA-MM-DD/</i> y pida a Claude que los ordene (instrucción 7).</p>
+</section>
+
+<section>
+  <h2>5. Instrucciones listas para copiar en Cowork</h2>
+  <p class="lead">Copie la instrucción, cambie lo que está entre corchetes y péguela en Cowork con la carpeta <i>Bajo_el_Arbol</i> seleccionada. La instrucción 8, para el cierre del mes, está en la sección 7.</p>
+
+  <div class="prompt"><div class="t">1 · Al empezar cualquier sesión</div>
+  <div class="c">Lee INSTRUCCIONES_PARA_CLAUDE.md y CONTROL_DE_TAREAS.xlsx. Dime en qué punto va el trabajo, qué toca esta semana y qué datos le faltan al cliente.</div></div>
+
+  <div class="prompt"><div class="t">2 · Preparar una semana (martes)</div>
+  <div class="c">Prepara la semana [4] según su _PLAN_DE_LA_SEMANA.txt y la pestaña Calendario. Crea una carpeta por publicación con la imagen en 1080 × 1350 (o 1080 × 1920 para historias) y la identidad de marca, y escribe los textos con hashtags en Textos_para_publicar.txt. Marca [PENDIENTE] lo que no esté confirmado y actualiza el Excel.</div>
+  <div class="cuando">Si una pieza necesita una foto que no existe, Claude lo indicará como pendiente en lugar de inventarla.</div></div>
+
+  <div class="prompt"><div class="t">3 · PDF de revisión para el cliente (miércoles)</div>
+  <div class="c">Arma el PDF de revisión de la semana [4] con el mismo formato que 04_Revision_cliente/Semanas_1-3_por_enviar/Revision_contenido_Bajo_el_Arbol.pdf, y un mensaje breve para WhatsApp. Guárdalos en 04_Revision_cliente/Semana_[4]_por_enviar/.</div></div>
+
+  <div class="prompt"><div class="t">4 · Registrar la respuesta del cliente</div>
+  <div class="c">El cliente respondió esto: [pegue el mensaje o adjunte la captura]. Guárdalo en la carpeta del envío, actualiza las columnas Aprobado y Pendientes cliente del Excel y aplica los cambios que pidió.</div></div>
+
+  <div class="prompt"><div class="t">5 · Diseñar una pieza que esperaba datos</div>
+  <div class="c">Ya llegaron los datos de [las cajas de regalo]: [contenido, precio, foto]. Diseña la publicación [P8] en su carpeta, con texto y hashtags, y márcala como Listo en el Excel.</div></div>
+
+  <div class="prompt"><div class="t">6 · Reporte semanal (viernes)</div>
+  <div class="c">Datos de la semana [2]: gasto en mensajes $[ ], gasto en reconocimiento $[ ], alcance [ ], impresiones [ ], clics [ ], mensajes recibidos [ ], promociones usadas [ ], ventas atribuidas $[ ]. Llénalos en Reporte semanal, explícame el CTR, el costo por mensaje y la tasa de conversión con su fórmula, y redacta el mensaje de WhatsApp con la plantilla de 06_Reportes.</div></div>
+
+  <div class="prompt"><div class="t">7 · Ordenar el material de una visita</div>
+  <div class="c">Ordena las fotos y videos de 07_Material_del_local/Visita_[AAAA-MM-DD] por tema, renómbralos y dime cuáles sirven para las publicaciones pendientes del calendario.</div></div>
+
+</section>
+
+<section>
+  <h2>6. El control de tareas en Excel</h2>
+  <p class="lead"><i>CONTROL_DE_TAREAS.xlsx</i> es el único lugar donde se registra el estado del trabajo.</p>
+  <table>
+    <tr><th style="width:38mm">Pestaña</th><th>Para qué sirve</th></tr>
+    <tr><td>Inicio</td><td>Leyenda de colores y explicación de cada pestaña.</td></tr>
+    <tr><td>Calendario</td><td>Las 23 fechas del calendario navideño y las historias de cada semana. Las columnas Diseño, Enviado, Aprobado y Publicado tienen listas desplegables y se colorean solas. Al final, un resumen con el porcentaje publicado.</td></tr>
+    <tr><td>Pendientes cliente</td><td>Los 16 datos que debe entregar el negocio, con su fecha límite. Los días de atraso se calculan solos y aparecen en rojo.</td></tr>
+    <tr><td>Rutina semanal</td><td>Las tareas de cada día, con una columna por semana para marcar ✓.</td></tr>
+    <tr><td>Punto de partida</td><td>Seguidores, alcance y mensajes antes y después del mes; la variación se calcula sola.</td></tr>
+    <tr><td>Reporte semanal</td><td>Gasto, alcance, clics, mensajes y promociones de cada semana. Calcula CTR = clics ÷ impresiones (Meta, s. f.), costo por mensaje y tasa de conversión.</td></tr>
+    <tr><td>Indicadores del mes</td><td>Fórmulas del plan: CAC, ROAS, ROI y punto de equilibrio. Toma los totales del Reporte semanal.</td></tr>
+  </table>
+  <h3>Colores</h3>
+  <p><b style="background:#fff2b3;padding:0 1.5mm">Celdas amarillas:</b> las llena usted. <b style="color:#0000ff">Texto azul:</b> datos que usted escribe. <b style="color:#008000">Texto verde:</b> vienen de otra pestaña. <b>Texto negro:</b> se calcula solo; no lo toque.</p>
+  <div class="ok"><b>Comprobado:</b> con los números del ejemplo de su plan de trabajo (anuncios $1,000; servicio $1,200; ingresos $6,000; margen 60 %), el Excel da ROAS = 6.0, ROI = 63.6 %, CAC = $110 y punto de equilibrio = $3,666.67, que equivale a 42 ventas con un ticket promedio de $89. Coincide con el plan.</div>
+</section>
+
+<section>
+  <h2>7. Fechas clave</h2>
+  <p class="lead">Lo más próximo. El detalle completo está en las pestañas Calendario y Pendientes cliente.</p>
+  <table>
+    <tr><th style="width:30mm">Fecha</th><th>Qué pasa</th></tr>
+    <tr><td>Mar 10 nov</td><td>Arranque: enviar el PDF de revisión de las semanas 1 a 3; pedir accesos, la tarjeta y la promoción exclusiva; registrar el punto de partida.</td></tr>
+    <tr><td>Mié 11 nov</td><td>Fecha límite de respuesta del cliente para la semana 1.</td></tr>
+    <tr><td>Jue 12 nov</td><td>Primera publicación: carrusel <i>Conoce Bajo el Árbol</i>, que no depende de datos pendientes.</td></tr>
+    <tr><td>Vie 13 nov</td><td>Promoción de fin de semana largo (necesita producto y precio). Fecha límite para agendar la visita al local.</td></tr>
+    <tr><td>Lun 16 nov</td><td>Día festivo · arranca la campaña de mensajes con los anuncios de desayunos y chilaquiles.</td></tr>
+    <tr><td>Mié 18 nov</td><td>Video del pan (si ya se grabó). Pedir los datos de las cajas de regalo.</td></tr>
+    <tr><td>Vie 20 nov</td><td>Fecha límite para los datos de las cajas de regalo y para saber qué día estará decorado el local.</td></tr>
+    <tr><td>Mié 25 nov</td><td>Enviar al cliente la revisión de la semana 4 (bebidas de temporada, video "Quiénes somos" y sorteo).</td></tr>
+    <tr><td>Fin del mes de prueba</td><td>Reporte final (instrucción 8) y decisión del dueño de continuar.</td></tr>
+  </table>
+  <h3>Instrucción para el cierre del mes</h3>
+  <div class="prompt"><div class="t">8 · Reporte final del mes de prueba</div>
+  <div class="c">Prepara el reporte final del mes de prueba: compara Punto de partida (antes y después), calcula en Indicadores del mes el CAC, el ROAS, el ROI y el punto de equilibrio mostrando cada fórmula, y redacta qué funcionó y qué recomiendo para el mes 2. Guárdalo en 06_Reportes como PDF.</div></div>
+</section>
+
+<section>
+  <h2>8. Cowork o Claude Code: qué usar para qué</h2>
+  <p class="lead">Use Cowork para el día a día y Claude Code solo para cambios técnicos.</p>
+  <div class="dos">
+    <div class="caja"><h3>Claude Cowork · todos los días</h3><ul>
+      <li>Preparar publicaciones y textos.</li>
+      <li>PDF de revisión y mensajes para el cliente.</li>
+      <li>Reportes semanales e indicadores.</li>
+      <li>Ordenar fotos y archivos.</li>
+      <li>Trabaja directamente en su carpeta (Anthropic, s. f.-a).</li></ul></div>
+    <div class="caja"><h3>Claude Code · ocasionalmente</h3><ul>
+      <li>Cambios en la página web de Bajo el Árbol.</li>
+      <li>Regenerar muchas piezas iguales con las plantillas de <i>08_Plantillas_tecnicas</i> (por ejemplo, si sube un precio).</li>
+      <li>Copia maestra del trabajo técnico: repositorio <i>splua1312-blip/bajo-el-arbol</i>.</li></ul></div>
+  </div>
+  <div class="aviso"><b>Pendiente técnico:</b> el pie de la página web muestra su WhatsApp como 221 971 9914, pero en el plan de trabajo aparece 222 954 9368. Si el correcto es el del plan, corríjalo con Claude Code.</div>
+
+  <h3 style="margin-top:9mm">Referencias</h3>
+  <div class="ref">
+    <p>Anthropic. (s. f.-a). <i>Get started with Claude Cowork</i>. Claude Help Center. Recuperado el 10 de noviembre de 2026, de https://support.claude.com/en/articles/13345190-get-started-with-claude-cowork</p>
+    <p>Anthropic. (s. f.-b). <i>Setting up Claude Cowork</i>. Claude Academy. Recuperado el 10 de noviembre de 2026, de https://academy.claude.com/courses/introduction-to-claude-cowork/getting-set-up</p>
+    <p>Anthropic. (s. f.-c). <i>Use Claude Cowork safely</i>. Claude Help Center. Recuperado el 10 de noviembre de 2026, de https://support.claude.com/en/articles/13364135-use-claude-cowork-safely</p>
+    <p>Anthropic. (s. f.-d). <i>Claude Cowork and chat are one Claude</i>. Claude Help Center. Recuperado el 10 de noviembre de 2026, de https://support.claude.com/en/articles/16761823-claude-cowork-and-chat-are-one-claude</p>
+    <p>Meta. (s. f.). <i>CTR (link click-through rate)</i>. Meta Business Help Center. Recuperado el 10 de noviembre de 2026, de https://www.facebook.com/business/help/877711998984611</p>
+  </div>
+</section>
+</body></html>
